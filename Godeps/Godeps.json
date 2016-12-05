@@ -1,0 +1,12 @@
+{
+	"ImportPath": "gorunning",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v75",
+	"Deps": [
+		{
+			"ImportPath": "github.com/coreos/pkg/flagutil",
+			"Comment": "v3-2-g447b7ec",
+			"Rev": "447b7ec906e523386d9c53be15b55a8ae86ea944"
+		}
+	]
+}
