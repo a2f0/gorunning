@@ -7,6 +7,7 @@ import (
   "os"
   "os/signal"
   "syscall"
+  "reflect"
 
   "github.com/coreos/pkg/flagutil"
   "github.com/dghubble/go-twitter/twitter"
@@ -46,7 +47,25 @@ func main() {
   // Convenience Demux demultiplexed stream messages
   demux := twitter.NewSwitchDemux()
   demux.Tweet = func(tweet *twitter.Tweet) {
-    fmt.Println(tweet.Text)
+    //This is the tweet
+    //fmt.Println(tweet.Text)
+    fmt.Println("tweet is a type of: ", reflect.TypeOf(tweet))
+    fmt.Println("place: ", tweet.Place)
+    //fmt.Println(tweet.Place.Attributes)
+    //if tweet.Place != nil {
+    //  fmt.Println("has a place: ", tweet.Place)
+    //  if tweet.Place.BoundingBox != nil {
+    //    fmt.Println("has a BOUNDING BOX")
+    //      fmt.Println(fmt.Printf("%+v\n", tweet.Place.BoundingBox))
+    //  }
+    //} else {
+    //  fmt.Println("does not have a place")
+    //}
+    if tweet.Coordinates != nil {
+      fmt.Println(fmt.Printf("%+v\n", tweet.Coordinates))
+    } else {
+    }
+    fmt.Println(fmt.Printf("%+v\n", tweet.Place))
   }
   demux.DM = func(dm *twitter.DirectMessage) {
     fmt.Println(dm.SenderID)
@@ -59,7 +78,7 @@ func main() {
 
   // FILTER
   filterParams := &twitter.StreamFilterParams{
-    Track:         []string{"cat"},
+    Track:         []string{"and"},
     StallWarnings: twitter.Bool(true),
   }
   stream, err := client.Streams.Filter(filterParams)

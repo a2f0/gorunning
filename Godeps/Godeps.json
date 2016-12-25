@@ -4,9 +4,36 @@
 	"GodepVersion": "v75",
 	"Deps": [
 		{
+			"ImportPath": "github.com/cenkalti/backoff",
+			"Comment": "v1.0.0-15-gb02f2bb",
+			"Rev": "b02f2bbce11d7ea6b97f282ef1771b0fe2f65ef3"
+		},
+		{
 			"ImportPath": "github.com/coreos/pkg/flagutil",
 			"Comment": "v3-2-g447b7ec",
 			"Rev": "447b7ec906e523386d9c53be15b55a8ae86ea944"
+		},
+		{
+			"ImportPath": "github.com/dghubble/go-twitter/twitter",
+			"Rev": "f310dcebe0ae1f6b73165caed281f87768c15780"
+		},
+		{
+			"ImportPath": "github.com/dghubble/oauth1",
+			"Comment": "v0.4.0-11-g4385816",
+			"Rev": "4385816142116aade2d97d0f320f9d3666e74cd9"
+		},
+		{
+			"ImportPath": "github.com/dghubble/sling",
+			"Comment": "v1.0-28-gc961a43",
+			"Rev": "c961a4334054e64299d16f8a31bd686ee2565ae4"
+		},
+		{
+			"ImportPath": "github.com/google/go-querystring/query",
+			"Rev": "9235644dd9e52eeae6fa48efd539fdc351a0af53"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "b1a2d6e8c8b5fc8f601ead62536f02a8e1b6217d"
 		}
 	]
 }
